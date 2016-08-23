@@ -77,7 +77,7 @@ function getRandomNumber(){
 
 // Function below to generate random quotes.
 
-function getRandomQoute(prop){
+function getRandomQuote(prop){
 	
 	var randomQoute = quotes[randomNumber]; // Random Quote based on the random number
 
@@ -96,8 +96,8 @@ function printQuote(){
 	//console.log(randomNumber);
 	if(!(isNaN(randomNumber))){ // this line checks if the random number is number and not undefined or string.
 
-		var Q = getRandomQoute('quote'); // get a quote from getRandomQuote and assign it to Q
-		var S = getRandomQoute('source'); // get a source from getRandomQuote and assign it to S
+		var Q = getRandomQuote('quote'); // get a quote from getRandomQuote and assign it to Q
+		var S = getRandomQuote('source'); // get a source from getRandomQuote and assign it to S
 
 		document.getElementById('quote-box').innerHTML =' <p class="quote">' + counter+ '- ' + Q + '</p>' + '<p class="source">'+ S + '<p>'; // To print on the webpage
 		counter += 1;
