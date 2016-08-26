@@ -102,9 +102,11 @@ function printQuote(){
 		document.getElementById('quote-box').innerHTML =' <p class="quote">' + counter+ '- ' + Q + '</p>' + '<p class="source">'+ S + '<p>'; // To print on the webpage
 		counter += 1;
 	} else{
-		document.getElementById('quote-box').innerHTML = '<p class="quote">Sorry. There are no more qoutes to display, please refresh the page to see them again</p>';
-		document.getElementById('loadQuote').style.display = 'none';
-		clearInterval(refreshColor);
+		//document.getElementById('quote-box').innerHTML = '<p class="quote">Sorry. There are no more qoutes to display, please refresh the page to see them again</p>';
+		//document.getElementById('loadQuote').style.display = 'none';
+		numbers = [];
+		getRandomNumber();
+		//clearInterval(refreshColor);
 	}
 	
 
@@ -124,8 +126,8 @@ function getRandomColor(){
 
 function refreshQuote(){
 	
-	setInterval(function(){printQuote()}, 5000); // it calls printQuote function every 5 sedonds
-	refreshColor = setInterval(function(){ getRandomColor()}, 5000); // it calls getRandomColor function every 5 seconds
+	setInterval(function(){printQuote()}, 8000); // it calls printQuote function every 8 sedonds
+	refreshColor = setInterval(function(){ getRandomColor()}, 8000); // it calls getRandomColor function every 8 seconds
 }
 
 refreshQuote(); // calling refreshQuote function.
